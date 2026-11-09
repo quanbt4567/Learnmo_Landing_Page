@@ -955,7 +955,7 @@ footer {
     }
 
     .courses {
-        padding: 30px 50px;
+        padding: 30px clamp(25px, 4vw, 50px);
         gap: 30px;
         min-height: 611px;
     }
@@ -1054,7 +1054,7 @@ footer {
     }
 
     .testimonials {
-        padding: 30px 50px;
+        padding: 30px clamp(25px, 4vw, 50px);
         gap: 30px;
         min-height: 657.64px;
     }
