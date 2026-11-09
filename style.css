@@ -116,7 +116,7 @@ footer {
 .section-title {
     width: 100%;
     max-width: 1200px;
-    height: 68px;
+    min-height: 68px;
     font-family: 'Michroma', sans-serif;
     font-weight: 400;
     font-size: 48px;
@@ -132,7 +132,7 @@ footer {
     padding: 50px 120px;
     width: 100%;
     max-width: 1440px;
-    height: 153px;
+    min-height: 153px;
 }
 
 .logo {
@@ -224,13 +224,13 @@ footer {
     gap: 25px;
     width: 100%;
     max-width: 1440px;
-    height: 457px;
+    min-height: 457px;
 }
 
 .hero-title {
     width: 100%;
     max-width: 1200px;
-    height: 164px;
+    min-height: 164px;
     font-family: 'Michroma', sans-serif;
     font-weight: 400;
     font-size: 58px;
@@ -242,7 +242,7 @@ footer {
 .hero-text {
     width: 100%;
     max-width: 1200px;
-    height: 58px;
+    min-height: 58px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -267,7 +267,7 @@ footer {
     padding: 50px 120px;
     gap: 50px;
     width: 100%;
-    height: 843px;
+    min-height: 843px;
     background: var(--section-gradient);
 }
 
@@ -281,7 +281,7 @@ footer {
     gap: 50px 30px;
     width: 100%;
     max-width: 1200px;
-    height: 625px;
+    min-height: 625px;
 }
 
 .feature {
@@ -291,11 +291,11 @@ footer {
     align-items: center;
     gap: 20px;
     width: 350px;
-    height: 274px;
+    min-height: 274px;
 }
 
 .feature-pros {
-    height: 301px;
+    min-height: 301px;
 }
 
 .feature-icon {
@@ -313,7 +313,7 @@ footer {
 
 .feature-title {
     width: 350px;
-    height: 80px;
+    min-height: 80px;
     font-family: 'Michroma', sans-serif;
     font-weight: 400;
     font-size: 28px;
@@ -327,7 +327,7 @@ footer {
 
 .feature-text {
     width: 350px;
-    height: 54px;
+    min-height: 54px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 22px;
@@ -337,7 +337,7 @@ footer {
 }
 
 .feature-pros .feature-text {
-    height: 81px;
+    min-height: 81px;
 }
 
 .courses {
@@ -348,7 +348,7 @@ footer {
     gap: 50px;
     width: 100%;
     max-width: 1440px;
-    height: 688px;
+    min-height: 688px;
 }
 
 .courses-slider {
@@ -359,7 +359,7 @@ footer {
     gap: 30px;
     width: 100%;
     max-width: 1200px;
-    height: 470px;
+    min-height: 470px;
     overflow: hidden;
 }
 
@@ -371,7 +371,7 @@ footer {
     padding: 50px 30px 30px;
     gap: 100px;
     width: 380px;
-    height: 470px;
+    min-height: 470px;
     flex-shrink: 0;
 }
 
@@ -382,7 +382,7 @@ footer {
     gap: 10px;
     width: 100%;
     max-width: 320px;
-    height: 238px;
+    min-height: 238px;
 }
 
 .course-icon {
@@ -401,7 +401,7 @@ footer {
 
 .course-title {
     width: 320px;
-    height: 62px;
+    min-height: 62px;
     font-family: 'Michroma', sans-serif;
     font-weight: 400;
     font-size: 22px;
@@ -413,7 +413,7 @@ footer {
 
 .course-text {
     width: 320px;
-    height: 66px;
+    min-height: 66px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -438,19 +438,20 @@ footer {
     padding: 50px 120px;
     gap: 50px;
     width: 100%;
-    height: 396px;
+    min-height: 396px;
     background: var(--section-gradient);
 }
 
 .steps-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap: 17px;
     width: 100%;
     max-width: 1200px;
-    height: 178px;
+    min-height: 178px;
 }
 
 .step {
@@ -459,7 +460,7 @@ footer {
     align-items: center;
     gap: 20px;
     width: 383px;
-    height: 178px;
+    min-height: 178px;
 }
 
 .step-icon {
@@ -476,7 +477,7 @@ footer {
 
 .step-text {
     width: 383px;
-    height: 58px;
+    min-height: 58px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -493,7 +494,7 @@ footer {
     gap: 50px;
     width: 100%;
     max-width: 1440px;
-    height: 712.64px;
+    min-height: 712.64px;
 }
 
 .testimonials-slider {
@@ -504,7 +505,7 @@ footer {
     gap: 30px;
     width: 100%;
     max-width: 1200px;
-    height: 494.64px;
+    min-height: 494.64px;
     overflow: hidden;
 }
 
@@ -516,7 +517,7 @@ footer {
     padding: 50px 30px;
     gap: 30px;
     width: 380px;
-    height: 494.64px;
+    min-height: 494.64px;
     flex-shrink: 0;
 }
 
@@ -527,7 +528,7 @@ footer {
     align-items: center;
     gap: 5px;
     width: 320px;
-    height: 156.24px;
+    min-height: 156.24px;
 }
 
 .testimonial-avatar {
@@ -573,11 +574,11 @@ footer {
     align-items: center;
     gap: 5px;
     width: 320px;
-    height: 186.39px;
+    min-height: 186.39px;
 }
 
 .testimonial-card:first-child .testimonial-quote {
-    height: 208.39px;
+    min-height: 208.39px;
 }
 
 .quote-mark {
@@ -589,7 +590,7 @@ footer {
 
 .quote-text {
     width: 320px;
-    height: 132px;
+    min-height: 132px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -599,7 +600,7 @@ footer {
 }
 
 .quote-text-ahmed {
-    height: 154px;
+    min-height: 154px;
 }
 
 .cta {
@@ -610,7 +611,7 @@ footer {
     padding: 50px 120px;
     gap: 50px;
     width: 100%;
-    height: 342px;
+    min-height: 342px;
     background: var(--section-gradient);
 }
 
@@ -621,13 +622,13 @@ footer {
     gap: 10px;
     width: 100%;
     max-width: 1200px;
-    height: 107px;
+    min-height: 107px;
 }
 
 .cta-title {
     width: 100%;
     max-width: 1200px;
-    height: 68px;
+    min-height: 68px;
     font-family: 'Michroma', sans-serif;
     font-weight: 400;
     font-size: 48px;
@@ -639,7 +640,7 @@ footer {
 .cta-subtitle {
     width: 100%;
     max-width: 1200px;
-    height: 29px;
+    min-height: 29px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -674,7 +675,7 @@ footer {
     gap: 20px;
     width: 100%;
     max-width: 1440px;
-    height: 355px;
+    min-height: 355px;
 }
 
 .footer-logo {
@@ -693,12 +694,13 @@ footer {
 .footer-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 50px;
     width: 100%;
     max-width: 1200px;
-    height: 26px;
+    min-height: 26px;
 }
 
 .footer-link {
@@ -740,7 +742,7 @@ footer {
     gap: 50px;
     width: 100%;
     max-width: 1200px;
-    height: 26px;
+    min-height: 26px;
 }
 
 .footer-email {
@@ -773,7 +775,7 @@ footer {
     gap: 50px;
     width: 100%;
     max-width: 1200px;
-    height: 26px;
+    min-height: 26px;
 }
 
 .copyright-left {
@@ -835,7 +837,7 @@ footer {
 
     .top-nav {
         padding: 30px 50px;
-        height: 110px;
+        min-height: 110px;
     }
 
     .logo {
@@ -870,19 +872,19 @@ footer {
     .hero {
         padding: 30px 50px;
         gap: 30px;
-        height: 502px;
+        min-height: 502px;
     }
 
     .hero-title {
         max-width: 668px;
-        height: 204px;
+        min-height: 204px;
         font-size: 48px;
         line-height: 68px;
     }
 
     .hero-text {
         max-width: 668px;
-        height: 108px;
+        min-height: 108px;
         font-size: 22px;
         line-height: 27px;
     }
@@ -898,30 +900,30 @@ footer {
     .why {
         padding: 30px 50px;
         gap: 30px;
-        height: 960px;
+        min-height: 960px;
     }
 
     .why .section-title {
         max-width: 668px;
-        height: 51px;
+        min-height: 51px;
         font-size: 36px;
         line-height: 51px;
     }
 
     .why-items {
         max-width: 668px;
-        height: 819px;
+        min-height: 819px;
         gap: 30px 50px;
     }
 
     .feature {
         width: 300px;
-        height: 253px;
+        min-height: 253px;
         gap: 15px;
     }
 
     .feature-pros {
-        height: 253px;
+        min-height: 253px;
     }
 
     .feature-icon {
@@ -934,7 +936,7 @@ footer {
 
     .feature-title {
         width: 300px;
-        height: 62px;
+        min-height: 62px;
         font-size: 22px;
         line-height: 31px;
     }
@@ -942,7 +944,7 @@ footer {
     .feature-text,
     .feature-pros .feature-text {
         width: 300px;
-        height: 81px;
+        min-height: 81px;
         font-size: 22px;
         line-height: 27px;
     }
@@ -950,84 +952,84 @@ footer {
     .courses {
         padding: 30px 50px;
         gap: 30px;
-        height: 611px;
+        min-height: 611px;
     }
 
     .courses .section-title {
         max-width: 668px;
-        height: 51px;
+        min-height: 51px;
         font-size: 36px;
         line-height: 51px;
     }
 
     .courses-slider {
         max-width: 668px;
-        height: 470px;
+        min-height: 470px;
         gap: 25px;
         justify-content: flex-start;
     }
 
     .course-card {
         width: 320px;
-        height: 470px;
+        min-height: 470px;
         padding: 50px 30px 30px;
         gap: 0;
     }
 
     .course-up {
         width: 260px;
-        height: 260px;
+        min-height: 260px;
     }
 
     .course-card:nth-child(2) .course-title {
-        height: 93px;
+        min-height: 93px;
     }
 
     .course-card:nth-child(2) .course-up {
-        height: 288px;
+        min-height: 288px;
     }
 
     .course-card:last-child .course-up {
-        height: 238px;
+        min-height: 238px;
     }
 
     .course-title {
         width: 260px;
-        height: 62px;
+        min-height: 62px;
     }
 
     .course-text {
         width: 260px;
-        height: 88px;
+        min-height: 88px;
     }
 
     .course-card:last-child .course-text {
-        height: 66px;
+        min-height: 66px;
     }
 
     .steps {
         padding: 30px 50px;
         gap: 30px;
-        height: 530px;
+        min-height: 530px;
     }
 
     .steps .section-title {
         max-width: 668px;
-        height: 102px;
+        min-height: 102px;
         font-size: 36px;
         line-height: 51px;
     }
 
     .steps-row {
         max-width: 668px;
-        height: 338px;
+        min-height: 338px;
         flex-wrap: wrap;
         gap: 30px 17px;
     }
 
     .step {
         width: 300px;
-        height: 154px;
+        min-height: 154px;
         gap: 20px;
     }
 
@@ -1041,7 +1043,7 @@ footer {
 
     .step-text {
         width: 300px;
-        height: 54px;
+        min-height: 54px;
         font-size: 22px;
         line-height: 27px;
     }
@@ -1049,32 +1051,32 @@ footer {
     .testimonials {
         padding: 30px 50px;
         gap: 30px;
-        height: 657.64px;
+        min-height: 657.64px;
     }
 
     .testimonials .section-title {
         max-width: 668px;
-        height: 51px;
+        min-height: 51px;
         font-size: 36px;
         line-height: 51px;
     }
 
     .testimonials-slider {
         max-width: 668px;
-        height: 516.64px;
+        min-height: 516.64px;
         gap: 25px;
         justify-content: flex-start;
     }
 
     .testimonial-card {
         width: 320px;
-        height: 516.64px;
+        min-height: 516.64px;
         padding: 50px 20px;
     }
 
     .testimonial-name {
         width: 280px;
-        height: 156.24px;
+        min-height: 156.24px;
     }
 
     .testimonial-person {
@@ -1087,43 +1089,43 @@ footer {
 
     .testimonial-quote {
         width: 280px;
-        height: 208.39px;
+        min-height: 208.39px;
     }
 
     .testimonial-card:first-child .testimonial-quote {
-        height: 230.39px;
+        min-height: 230.39px;
     }
 
     .quote-text {
         width: 280px;
-        height: 154px;
+        min-height: 154px;
     }
 
     .quote-text-ahmed {
-        height: 176px;
+        min-height: 176px;
     }
 
     .cta {
         padding: 30px 50px;
         gap: 30px;
-        height: 270px;
+        min-height: 270px;
     }
 
     .cta-text {
         max-width: 668px;
-        height: 119px;
+        min-height: 119px;
     }
 
     .cta-title {
         max-width: 668px;
-        height: 51px;
+        min-height: 51px;
         font-size: 36px;
         line-height: 51px;
     }
 
     .cta-subtitle {
         max-width: 668px;
-        height: 58px;
+        min-height: 58px;
         font-size: 24px;
         line-height: 29px;
     }
@@ -1139,7 +1141,7 @@ footer {
     .footer {
         padding: 30px 50px 50px;
         gap: 30px;
-        height: 387px;
+        min-height: 387px;
     }
 
     .footer-logo {
@@ -1151,7 +1153,7 @@ footer {
 
     .footer-links {
         max-width: 668px;
-        height: 62px;
+        min-height: 62px;
         flex-wrap: wrap;
         gap: 10px 30px;
     }
@@ -1160,7 +1162,7 @@ footer {
         flex-direction: column;
         gap: 10px;
         max-width: 668px;
-        height: 62px;
+        min-height: 62px;
     }
 
     .footer-email {
@@ -1175,7 +1177,7 @@ footer {
 
     .footer-copyright {
         max-width: 668px;
-        height: 26px;
+        min-height: 26px;
         gap: 50px;
     }
 }
@@ -1218,7 +1220,7 @@ footer {
 
     .top-nav {
         padding: 20px 30px;
-        height: 73px;
+        min-height: 73px;
     }
 
     .logo {
@@ -1243,19 +1245,19 @@ footer {
     .hero {
         padding: 20px 30px;
         gap: 15px;
-        height: 243px;
+        min-height: 243px;
     }
 
     .hero-title {
         max-width: 330px;
-        height: 62px;
+        min-height: 62px;
         font-size: 22px;
         line-height: 31px;
     }
 
     .hero-text {
         max-width: 330px;
-        height: 68px;
+        min-height: 68px;
         font-size: 14px;
         line-height: 17px;
     }
@@ -1271,36 +1273,36 @@ footer {
     .why {
         padding: 20px 30px;
         gap: 30px;
-        height: 1071px;
+        min-height: 1071px;
     }
 
     .why .section-title {
         max-width: 330px;
-        height: 31px;
+        min-height: 31px;
         font-size: 22px;
         line-height: 31px;
     }
 
     .why-items {
         max-width: 330px;
-        height: 970px;
+        min-height: 970px;
         gap: 30px 50px;
     }
 
     .feature {
         width: 300px;
-        height: 150px;
+        min-height: 150px;
         gap: 10px;
     }
 
     .feature:nth-child(2) {
-        height: 172px;
+        min-height: 172px;
     }
 
     .feature:nth-child(3),
     .feature:nth-child(4),
     .feature:nth-child(5) {
-        height: 176px;
+        min-height: 176px;
     }
 
     .feature-icon {
@@ -1313,7 +1315,7 @@ footer {
 
     .feature-title {
         width: 300px;
-        height: 26px;
+        min-height: 26px;
         font-size: 18px;
         line-height: 26px;
     }
@@ -1321,50 +1323,50 @@ footer {
     .feature:nth-child(3) .feature-title,
     .feature:nth-child(4) .feature-title,
     .feature:nth-child(5) .feature-title {
-        height: 52px;
+        min-height: 52px;
     }
 
     .feature-text {
         width: 300px;
-        height: 44px;
+        min-height: 44px;
         font-size: 18px;
         line-height: 22px;
     }
 
     .feature-pros .feature-text {
-        height: 66px;
+        min-height: 66px;
     }
 
     .courses {
         padding: 20px 30px;
         gap: 30px;
-        height: 441px;
+        min-height: 441px;
     }
 
     .courses .section-title {
         max-width: 330px;
-        height: 31px;
+        min-height: 31px;
         font-size: 22px;
         line-height: 31px;
     }
 
     .courses-slider {
         max-width: 330px;
-        height: 340px;
+        min-height: 340px;
         gap: 25px;
         justify-content: flex-start;
     }
 
     .course-card {
         width: 320px;
-        height: 340px;
+        min-height: 340px;
         padding: 30px 20px 20px;
         gap: 20px;
     }
 
     .course-up {
         width: 280px;
-        height: 193px;
+        min-height: 193px;
     }
 
     .course-icon,
@@ -1375,14 +1377,14 @@ footer {
 
     .course-title {
         width: 280px;
-        height: 52px;
+        min-height: 52px;
         font-size: 18px;
         line-height: 26px;
     }
 
     .course-text {
         width: 280px;
-        height: 51px;
+        min-height: 51px;
         font-size: 14px;
         line-height: 17px;
     }
@@ -1398,26 +1400,26 @@ footer {
     .steps {
         padding: 20px 30px;
         gap: 30px;
-        height: 549px;
+        min-height: 549px;
     }
 
     .steps .section-title {
         max-width: 330px;
-        height: 62px;
+        min-height: 62px;
         font-size: 22px;
         line-height: 31px;
     }
 
     .steps-row {
         max-width: 330px;
-        height: 417px;
+        min-height: 417px;
         flex-wrap: wrap;
         gap: 30px 17px;
     }
 
     .step {
         width: 300px;
-        height: 119px;
+        min-height: 119px;
         gap: 15px;
     }
 
@@ -1431,7 +1433,7 @@ footer {
 
     .step-text {
         width: 300px;
-        height: 44px;
+        min-height: 44px;
         font-size: 18px;
         line-height: 22px;
     }
@@ -1439,33 +1441,33 @@ footer {
     .testimonials {
         padding: 20px 30px;
         gap: 30px;
-        height: 460.39px;
+        min-height: 460.39px;
     }
 
     .testimonials .section-title {
         max-width: 330px;
-        height: 31px;
+        min-height: 31px;
         font-size: 22px;
         line-height: 31px;
     }
 
     .testimonials-slider {
         max-width: 330px;
-        height: 359.39px;
+        min-height: 359.39px;
         gap: 25px;
         justify-content: flex-start;
     }
 
     .testimonial-card {
         width: 320px;
-        height: 359.39px;
+        min-height: 359.39px;
         padding: 30px 20px;
         gap: 20px;
     }
 
     .testimonial-name {
         width: 280px;
-        height: 123px;
+        min-height: 123px;
     }
 
     .testimonial-avatar {
@@ -1500,13 +1502,13 @@ footer {
 
     .testimonial-quote {
         width: 280px;
-        height: 156.39px;
+        min-height: 156.39px;
     }
 
     .quote-text,
     .quote-text-ahmed {
         width: 280px;
-        height: 102px;
+        min-height: 102px;
         font-size: 14px;
         line-height: 17px;
     }
@@ -1514,24 +1516,24 @@ footer {
     .cta {
         padding: 20px 30px;
         gap: 20px;
-        height: 241px;
+        min-height: 241px;
     }
 
     .cta-text {
         max-width: 330px;
-        height: 138px;
+        min-height: 138px;
     }
 
     .cta-title {
         max-width: 330px;
-        height: 62px;
+        min-height: 62px;
         font-size: 22px;
         line-height: 31px;
     }
 
     .cta-subtitle {
         max-width: 330px;
-        height: 66px;
+        min-height: 66px;
         font-size: 18px;
         line-height: 22px;
     }
@@ -1555,7 +1557,7 @@ footer {
     .footer {
         padding: 20px 30px;
         gap: 15px;
-        height: 336px;
+        min-height: 336px;
     }
 
     .footer-logo {
@@ -1632,7 +1634,7 @@ footer {
         justify-content: center;
         gap: 10px;
         max-width: 330px;
-        height: 17px;
+        min-height: 17px;
         white-space: nowrap;
     }
 
