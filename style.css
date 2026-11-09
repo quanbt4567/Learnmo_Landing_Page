@@ -1238,6 +1238,29 @@ footer {
         margin: 0 auto;
     }
 
+    .button-cta {
+        width: 179px;
+        height: 43px;
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .cta-btn-desktop {
+        display: none;
+    }
+
+    .cta-btn-mobile {
+        display: inline;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 15px;
+        align-items: center;
+    }
+
     .footer-copyright {
         gap: 20px;
     }
