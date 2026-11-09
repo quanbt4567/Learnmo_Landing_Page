@@ -803,6 +803,34 @@ footer {
     color: var(--text-white);
 }
 
+@media (max-width: 1320px) {
+    .courses,
+    .testimonials {
+        padding: 50px clamp(20px, 3vw, 60px);
+    }
+
+    .courses-slider,
+    .testimonials-slider {
+        max-width: 1100px;
+        gap: clamp(15px, 2vw, 30px);
+    }
+
+    .course-card,
+    .testimonial-card {
+        width: clamp(280px, calc((100% - 60px) / 3), 360px);
+        padding: 40px 20px 30px;
+    }
+
+    .course-up,
+    .course-title,
+    .course-text,
+    .testimonial-person,
+    .testimonial-role,
+    .testimonial-text {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .page-wrapper {
         gap: 30px;
@@ -1187,13 +1215,27 @@ footer {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
     .top-nav {
-        padding: 30px 25px;
+        padding: 25px 20px;
+        gap: 15px;
     }
 
     .nav-links {
         gap: 15px;
+    }
+
+    .courses-slider,
+    .testimonials-slider {
+        max-width: 330px;
+        justify-content: flex-start;
+        margin: 0 auto;
+    }
+
+    .course-card,
+    .testimonial-card {
+        width: 320px;
+        margin: 0 auto;
     }
 
     .footer-copyright {
