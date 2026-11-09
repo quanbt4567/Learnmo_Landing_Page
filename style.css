@@ -971,6 +971,7 @@ footer {
         width: 320px;
         height: 470px;
         padding: 50px 30px 30px;
+        gap: 0;
     }
 
     .course-up {
@@ -984,6 +985,10 @@ footer {
 
     .course-card:nth-child(2) .course-up {
         height: 288px;
+    }
+
+    .course-card:last-child .course-up {
+        height: 238px;
     }
 
     .course-title {
