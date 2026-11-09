@@ -129,6 +129,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
     padding: 50px 120px;
     width: 100%;
     max-width: 1440px;
@@ -148,10 +149,11 @@ footer {
     align-items: center;
     user-select: none;
     flex-shrink: 0;
+    margin-right: auto;
 }
 
 .nav-links {
-    width: 658px;
+    width: auto;
     height: 46px;
     display: flex;
     justify-content: center;
@@ -367,7 +369,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px 30px 30px;
     gap: 100px;
     width: 380px;
@@ -428,6 +430,7 @@ footer {
     font-size: 18px;
     line-height: 26px;
     align-self: flex-end;
+    margin: 0;
 }
 
 .steps {
@@ -838,6 +841,7 @@ footer {
     .top-nav {
         padding: 30px 50px;
         min-height: 110px;
+        gap: 30px;
     }
 
     .logo {
@@ -846,6 +850,7 @@ footer {
         font-size: 36px;
         line-height: 50px;
         flex-shrink: 0;
+        margin-right: auto;
     }
 
     .nav-links {
@@ -1409,6 +1414,8 @@ footer {
         padding: 10px 20px;
         font-size: 16px;
         line-height: 23px;
+        align-self: flex-end;
+        margin: 0;
     }
 
     .steps {
