@@ -62,7 +62,7 @@ body {
     width: 565px;
     height: 660px;
     top: 904px;
-    right: 0;
+    left: 1265px;
     background-color: var(--color-green);
 }
 
@@ -70,7 +70,7 @@ body {
     width: 565px;
     height: 660px;
     top: 2314px;
-    left: 0;
+    left: -455px;
     background-color: var(--ellipse-white);
 }
 
@@ -78,7 +78,7 @@ body {
     width: 565px;
     height: 660px;
     top: 3197px;
-    right: 0;
+    left: 1354px;
     background-color: var(--ellipse-white);
 }
 
@@ -96,12 +96,6 @@ body {
     cursor: pointer;
     box-sizing: border-box;
     text-align: center;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
 }
 
 .card {
@@ -153,6 +147,7 @@ footer {
     display: flex;
     align-items: center;
     user-select: none;
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -175,11 +170,6 @@ footer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-    color: var(--color-green);
 }
 
 .nav-link-courses {
@@ -205,6 +195,7 @@ footer {
     font-size: 18px;
     line-height: 26px;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .menu-hamburger {
@@ -376,7 +367,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 50px 30px 30px;
     gap: 100px;
     width: 380px;
@@ -436,8 +427,7 @@ footer {
     padding: 10px 20px;
     font-size: 18px;
     line-height: 26px;
-    align-self: flex-end;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .steps {
@@ -583,6 +573,10 @@ footer {
     align-items: center;
     gap: 5px;
     width: 320px;
+    height: 186.39px;
+}
+
+.testimonial-card:first-child .testimonial-quote {
     height: 208.39px;
 }
 
@@ -716,11 +710,6 @@ footer {
     text-transform: uppercase;
     color: var(--text-white);
     text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-link:hover {
-    color: var(--color-green);
 }
 
 .footer-link-about {
@@ -824,22 +813,24 @@ footer {
 
     .ellipse-1 {
         top: -176px;
-        left: -150px;
+        left: -149.48px;
     }
 
     .ellipse-2 {
         top: 924px;
-        right: -150px;
+        left: 654.21px;
+        right: auto;
     }
 
     .ellipse-3 {
         top: 2314px;
-        left: -150px;
+        left: -350px;
     }
 
     .ellipse-4 {
         top: 3367px;
-        right: -150px;
+        left: 670.5px;
+        right: auto;
     }
 
     .top-nav {
@@ -852,10 +843,11 @@ footer {
         height: 50px;
         font-size: 36px;
         line-height: 50px;
+        flex-shrink: 0;
     }
 
     .nav-links {
-        width: 409px;
+        width: auto;
         height: 46px;
         gap: 30px;
     }
@@ -868,6 +860,7 @@ footer {
     .button-register {
         width: 178px;
         height: 46px;
+        flex-shrink: 0;
     }
 
     .menu-hamburger {
@@ -982,6 +975,15 @@ footer {
 
     .course-up {
         width: 260px;
+        height: 260px;
+    }
+
+    .course-card:nth-child(2) .course-title {
+        height: 93px;
+    }
+
+    .course-card:nth-child(2) .course-up {
+        height: 288px;
     }
 
     .course-title {
@@ -1080,6 +1082,10 @@ footer {
 
     .testimonial-quote {
         width: 280px;
+        height: 208.39px;
+    }
+
+    .testimonial-card:first-child .testimonial-quote {
         height: 230.39px;
     }
 
@@ -1178,29 +1184,31 @@ footer {
     .ellipse-2,
     .ellipse-3,
     .ellipse-4 {
-        width: 360px;
-        height: 360px;
-        filter: blur(150px);
+        width: 500px;
+        height: 500px;
+        filter: blur(250px);
     }
 
     .ellipse-1 {
-        top: -100px;
-        left: -100px;
+        top: -176px;
+        left: -149.48px;
     }
 
     .ellipse-2 {
-        top: 700px;
-        right: -100px;
+        top: 924px;
+        left: 654.21px;
+        right: auto;
     }
 
     .ellipse-3 {
-        top: 1700px;
-        left: -100px;
+        top: 2314px;
+        left: -350px;
     }
 
     .ellipse-4 {
-        top: 2500px;
-        right: -100px;
+        top: 3367px;
+        left: 670.5px;
+        right: auto;
     }
 
     .top-nav {
@@ -1456,8 +1464,8 @@ footer {
     }
 
     .testimonial-avatar {
-        width: 60px;
-        height: 62.16px;
+        width: 70px;
+        height: 70px;
     }
 
     .testimonial-avatar img {
@@ -1467,8 +1475,8 @@ footer {
     }
 
     .quote-mark {
-        width: 24px;
-        height: 17.76px;
+        width: 30px;
+        height: 22.2px;
     }
 
     .testimonial-person {
@@ -1606,19 +1614,18 @@ footer {
     }
 
     .footer-location {
-        width: auto;
-        max-width: 330px;
+        width: 348px;
+        max-width: 348px;
         height: 17px;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 17px;
         white-space: nowrap;
-        letter-spacing: -0.2px;
     }
 
     .footer-copyright {
         flex-direction: row;
         justify-content: center;
-        gap: 6px;
+        gap: 10px;
         max-width: 330px;
         height: 17px;
         white-space: nowrap;
@@ -1628,7 +1635,7 @@ footer {
     .copyright-right {
         width: auto;
         height: 17px;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 17px;
         white-space: nowrap;
     }
