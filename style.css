@@ -1182,6 +1182,20 @@ footer {
     }
 }
 
+@media (max-width: 640px) {
+    .top-nav {
+        padding: 30px 25px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .footer-copyright {
+        gap: 20px;
+    }
+}
+
 @media (max-width: 390px) {
     .page-wrapper {
         gap: 10px;
