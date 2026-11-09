@@ -427,7 +427,7 @@ footer {
     padding: 10px 20px;
     font-size: 18px;
     line-height: 26px;
-    margin: 0 auto;
+    align-self: flex-end;
 }
 
 .steps {
