@@ -1,0 +1,1705 @@
+/* ==========================================================================
+   1. DESIGN TOKENS (:root)
+   ========================================================================== */
+:root {
+    --bg-color: #101417;
+    --text-white: #FFFFFF;
+    --text-gray: #9F9F9F;
+    --color-green: #50DCAA;
+    --btn-green-start: #1CB981;
+    --btn-green-end: #076141;
+    --ellipse-blue: #394A57;
+    --ellipse-white: #D9D9D9;
+
+    /* Surfaces & Gradients */
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --section-gradient: linear-gradient(180deg, rgba(23, 164, 114, 0.2) 0%, rgba(8, 102, 69, 0.2) 100%);
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   PAGE WRAPPER
+   ========================================================================== */
+.page-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 50px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   DECORATIVE BACKGROUND BLURS (4 Ellipses)
+   ========================================================================== */
+.bg-ellipse {
+    position: absolute;
+    filter: blur(250px);
+    opacity: 0.5;
+    z-index: 0;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Ellipse 1: Xanh dương ở trên trái */
+.ellipse-1 {
+    width: 565px;
+    height: 660px;
+    top: -226px;
+    left: 0;
+    background-color: var(--ellipse-blue);
+}
+
+/* Ellipse 2: Xanh lá ở phải */
+.ellipse-2 {
+    width: 565px;
+    height: 660px;
+    top: 904px;
+    right: 0;
+    background-color: var(--color-green);
+}
+
+/* Ellipse 3: Trắng mờ ở trái giữa */
+.ellipse-3 {
+    width: 565px;
+    height: 660px;
+    top: 2314px;
+    left: 0;
+    background-color: var(--ellipse-white);
+}
+
+/* Ellipse 4: Trắng mờ ở phải dưới */
+.ellipse-4 {
+    width: 565px;
+    height: 660px;
+    top: 3197px;
+    right: 0;
+    background-color: var(--ellipse-white);
+}
+
+/* ==========================================================================
+   SHARED COMPONENTS (Nút & Thẻ dùng chung)
+   ========================================================================== */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, var(--btn-green-start) 0%, var(--btn-green-end) 50%, var(--btn-green-start) 100%);
+    border-radius: 43px;
+    color: var(--text-white);
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--text-white);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+section,
+header,
+footer {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.section-title {
+    width: 100%;
+    max-width: 1200px;
+    height: 68px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 68px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+/* ==========================================================================
+   2. HEADER / TOP NAV
+   ========================================================================== */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 120px;
+    width: 100%;
+    max-width: 1440px;
+    height: 153px;
+}
+
+.logo {
+    width: 154px;
+    height: 53px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.nav-links {
+    width: 658px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-link {
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--text-white);
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-green);
+}
+
+.nav-link-courses {
+    width: 97px;
+}
+
+.nav-link-blog {
+    width: 52px;
+}
+
+.nav-link-about {
+    width: 74px;
+}
+
+.nav-link-contact {
+    width: 97px;
+}
+
+.button-register {
+    width: 178px;
+    height: 46px;
+    padding: 10px 40px;
+    font-size: 18px;
+    line-height: 26px;
+    white-space: nowrap;
+}
+
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 30px;
+    height: 19px;
+    cursor: pointer;
+}
+
+.menu-hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-green);
+    display: block;
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 25px;
+    width: 100%;
+    max-width: 1440px;
+    height: 457px;
+}
+
+.hero-title {
+    width: 100%;
+    max-width: 1200px;
+    height: 164px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 82px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 1200px;
+    height: 58px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.button-hero {
+    width: 441px;
+    height: 85px;
+    padding: 17px 64px;
+    font-size: 36px;
+    line-height: 51px;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   4. WHY LEARNMO?
+   ========================================================================== */
+.why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1440px;
+    height: 843px;
+    background: var(--section-gradient);
+}
+
+.why-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 625px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+    height: 274px;
+}
+
+.feature-pros {
+    height: 301px;
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.feature-icon img {
+    max-height: 100px;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+.feature-title {
+    width: 350px;
+    height: 80px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-text {
+    width: 350px;
+    height: 54px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.feature-pros .feature-text {
+    height: 81px;
+}
+
+/* ==========================================================================
+   5. FEATURED COURSES (Slider)
+   ========================================================================== */
+.courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1440px;
+    height: 688px;
+}
+
+.courses-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 470px;
+    overflow: hidden;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px 30px;
+    gap: 100px;
+    width: 380px;
+    height: 470px;
+    flex-shrink: 0;
+}
+
+.course-up {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 320px;
+    height: 238px;
+}
+
+.course-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+}
+
+.course-icon img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.course-title {
+    width: 320px;
+    height: 62px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+}
+
+.course-text {
+    width: 320px;
+    height: 66px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text-gray);
+}
+
+.button-enroll {
+    width: 180px;
+    height: 46px;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   6. STEPS SECTION
+   ========================================================================== */
+.steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1440px;
+    height: 396px;
+    background: var(--section-gradient);
+}
+
+.steps-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 17px;
+    width: 100%;
+    max-width: 1200px;
+    height: 178px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 383px;
+    height: 178px;
+}
+
+.step-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.step-icon img {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.step-text {
+    width: 383px;
+    height: 58px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+/* ==========================================================================
+   7. TESTIMONIALS SECTION (Slider)
+   ========================================================================== */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1440px;
+    height: 712.64px;
+}
+
+.testimonials-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 494.64px;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    gap: 30px;
+    width: 380px;
+    height: 494.64px;
+    flex-shrink: 0;
+}
+
+.testimonial-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 320px;
+    height: 156.24px;
+}
+
+.testimonial-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 93.24px;
+    border: 2px solid var(--text-white);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.testimonial-avatar img {
+    width: 50px;
+    height: 53.24px;
+    object-fit: contain;
+}
+
+.testimonial-person {
+    width: 320px;
+    height: 31px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.testimonial-role {
+    width: 320px;
+    height: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.testimonial-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 320px;
+    height: 208.39px;
+}
+
+.quote-mark-open,
+.quote-mark-close {
+    width: 30px;
+    height: 22.2px;
+    background-color: var(--color-green);
+    mask: url("data:image/svg+xml,%3Csvg width='30' height='23' viewBox='0 0 30 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 22.2V13.8C0 10.4 1.1 7.2 3.3 4.2C5.5 1.4 8.7 0 12.9 0L14.7 3.6C12.3 4.2 10.5 5.4 9.3 7.2C8.1 9 7.5 11 7.5 13.2H14.1V22.2H0ZM15.9 22.2V13.8C15.9 10.4 17 7.2 19.2 4.2C21.4 1.4 24.6 0 28.8 0L30.6 3.6C28.2 4.2 26.4 5.4 25.2 7.2C24 9 23.4 11 23.4 13.2H30V22.2H15.9Z' fill='black'/%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg width='30' height='23' viewBox='0 0 30 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 22.2V13.8C0 10.4 1.1 7.2 3.3 4.2C5.5 1.4 8.7 0 12.9 0L14.7 3.6C12.3 4.2 10.5 5.4 9.3 7.2C8.1 9 7.5 11 7.5 13.2H14.1V22.2H0ZM15.9 22.2V13.8C15.9 10.4 17 7.2 19.2 4.2C21.4 1.4 24.6 0 28.8 0L30.6 3.6C28.2 4.2 26.4 5.4 25.2 7.2C24 9 23.4 11 23.4 13.2H30V22.2H15.9Z' fill='black'/%3E%3C/svg%3E") no-repeat center / contain;
+    flex-shrink: 0;
+}
+
+.quote-mark-close {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.quote-text {
+    width: 320px;
+    height: 132px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.quote-text-ahmed {
+    height: 154px;
+}
+
+/* ==========================================================================
+   8. CTA SECTION
+   ========================================================================== */
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1440px;
+    height: 342px;
+    background: var(--section-gradient);
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    height: 107px;
+}
+
+.cta-title {
+    width: 100%;
+    max-width: 1200px;
+    height: 68px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 68px;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.cta-subtitle {
+    width: 100%;
+    max-width: 1200px;
+    height: 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.button-cta {
+    width: 836px;
+    height: 85px;
+    padding: 17px 64px;
+    font-size: 36px;
+    line-height: 51px;
+    white-space: nowrap;
+}
+
+.cta-btn-desktop {
+    display: inline;
+}
+
+.cta-btn-mobile {
+    display: none;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 120px 100px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1440px;
+    height: 355px;
+}
+
+.footer-logo {
+    width: 194px;
+    height: 67px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 67px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-white);
+    user-select: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    height: 26px;
+}
+
+.footer-link {
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-green);
+}
+
+.footer-link-about {
+    width: 135px;
+}
+
+.footer-link-partnerships {
+    width: 205px;
+}
+
+.footer-link-instructor {
+    width: 334px;
+}
+
+.footer-link-support {
+    width: 127px;
+}
+
+.footer-link-faq {
+    width: 54px;
+}
+
+.footer-address {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    height: 26px;
+}
+
+.footer-email {
+    width: 345px;
+    height: 26px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.footer-location {
+    width: 628px;
+    height: 26px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    height: 26px;
+}
+
+.copyright-left {
+    width: 233px;
+    height: 26px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.copyright-right {
+    width: 301px;
+    height: 26px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+/* ==========================================================================
+   RESPONSIVE: TABLET (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .page-wrapper {
+        gap: 30px;
+    }
+
+    .ellipse-1,
+    .ellipse-2,
+    .ellipse-3,
+    .ellipse-4 {
+        width: 500px;
+        height: 500px;
+    }
+
+    .ellipse-1 {
+        top: -176px;
+        left: -150px;
+    }
+
+    .ellipse-2 {
+        top: 924px;
+        right: -150px;
+    }
+
+    .ellipse-3 {
+        top: 2314px;
+        left: -150px;
+    }
+
+    .ellipse-4 {
+        top: 3367px;
+        right: -150px;
+    }
+
+    /* 2. Top Nav */
+    .top-nav {
+        padding: 30px 50px;
+        height: 110px;
+    }
+
+    .logo {
+        width: 146px;
+        height: 50px;
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .nav-links {
+        width: 409px;
+        height: 46px;
+        gap: 30px;
+    }
+
+    .nav-link-blog,
+    .nav-link-contact {
+        display: none;
+    }
+
+    .button-register {
+        width: 178px;
+        height: 46px;
+    }
+
+    .menu-hamburger {
+        display: none;
+    }
+
+    /* 3. Hero */
+    .hero {
+        padding: 30px 50px;
+        gap: 30px;
+        height: 502px;
+    }
+
+    .hero-title {
+        max-width: 668px;
+        height: 204px;
+        font-size: 48px;
+        line-height: 68px;
+    }
+
+    .hero-text {
+        max-width: 668px;
+        height: 108px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .button-hero {
+        width: 340px;
+        height: 70px;
+        padding: 15px 48px;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    /* 4. Why */
+    .why {
+        padding: 30px 50px;
+        gap: 30px;
+        height: 960px;
+    }
+
+    .why .section-title {
+        max-width: 668px;
+        height: 51px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    .why-items {
+        max-width: 668px;
+        height: 819px;
+        gap: 30px 50px;
+    }
+
+    .feature {
+        width: 300px;
+        height: 253px;
+        gap: 15px;
+    }
+
+    .feature-pros {
+        height: 253px;
+    }
+
+    .feature-icon {
+        height: 80px;
+    }
+
+    .feature-icon img {
+        max-height: 80px;
+    }
+
+    .feature-title {
+        width: 300px;
+        height: 62px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .feature-text,
+    .feature-pros .feature-text {
+        width: 300px;
+        height: 81px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    /* 5. Courses */
+    .courses {
+        padding: 30px 50px;
+        gap: 30px;
+        height: 611px;
+    }
+
+    .courses .section-title {
+        max-width: 668px;
+        height: 51px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    .courses-slider {
+        max-width: 668px;
+        height: 470px;
+        gap: 25px;
+        justify-content: flex-start;
+    }
+
+    .course-card {
+        width: 320px;
+        height: 470px;
+        padding: 50px 30px 30px;
+    }
+
+    .course-up {
+        width: 260px;
+    }
+
+    .course-title {
+        width: 260px;
+        height: 62px;
+    }
+
+    .course-text {
+        width: 260px;
+        height: 88px;
+    }
+
+    .course-card:last-child .course-text {
+        height: 66px;
+    }
+
+    /* 6. Steps */
+    .steps {
+        padding: 30px 50px;
+        gap: 30px;
+        height: 530px;
+    }
+
+    .steps .section-title {
+        max-width: 668px;
+        height: 102px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    .steps-row {
+        max-width: 668px;
+        height: 338px;
+        flex-wrap: wrap;
+        gap: 30px 17px;
+    }
+
+    .step {
+        width: 300px;
+        height: 154px;
+        gap: 20px;
+    }
+
+    .step-icon {
+        height: 80px;
+    }
+
+    .step-icon img {
+        max-height: 80px;
+    }
+
+    .step-text {
+        width: 300px;
+        height: 54px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    /* 7. Testimonials */
+    .testimonials {
+        padding: 30px 50px;
+        gap: 30px;
+        height: 657.64px;
+    }
+
+    .testimonials .section-title {
+        max-width: 668px;
+        height: 51px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    .testimonials-slider {
+        max-width: 668px;
+        height: 516.64px;
+        gap: 25px;
+        justify-content: flex-start;
+    }
+
+    .testimonial-card {
+        width: 320px;
+        height: 516.64px;
+        padding: 50px 20px;
+    }
+
+    .testimonial-name {
+        width: 280px;
+        height: 156.24px;
+    }
+
+    .testimonial-person {
+        width: 280px;
+    }
+
+    .testimonial-role {
+        width: 280px;
+    }
+
+    .testimonial-quote {
+        width: 280px;
+        height: 230.39px;
+    }
+
+    .quote-text {
+        width: 280px;
+        height: 154px;
+    }
+
+    .quote-text-ahmed {
+        height: 176px;
+    }
+
+    /* 8. CTA */
+    .cta {
+        padding: 30px 50px;
+        gap: 30px;
+        height: 270px;
+    }
+
+    .cta-text {
+        max-width: 668px;
+        height: 119px;
+    }
+
+    .cta-title {
+        max-width: 668px;
+        height: 51px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    .cta-subtitle {
+        max-width: 668px;
+        height: 58px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .button-cta {
+        width: 554px;
+        height: 61px;
+        padding: 15px 32px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    /* 9. Footer */
+    .footer {
+        padding: 30px 50px 50px;
+        gap: 30px;
+        height: 387px;
+    }
+
+    .footer-logo {
+        width: 194px;
+        height: 67px;
+        font-size: 48px;
+        line-height: 67px;
+    }
+
+    .footer-links {
+        max-width: 668px;
+        height: 62px;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+    }
+
+    .footer-address {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 668px;
+        height: 62px;
+    }
+
+    .footer-email {
+        width: 345px;
+        height: 26px;
+    }
+
+    .footer-location {
+        width: 628px;
+        height: 26px;
+    }
+
+    .footer-copyright {
+        max-width: 668px;
+        height: 26px;
+        gap: 50px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE: MOBILE (max-width: 390px)
+   ========================================================================== */
+@media (max-width: 390px) {
+    .page-wrapper {
+        gap: 10px;
+    }
+
+    .ellipse-1,
+    .ellipse-2,
+    .ellipse-3,
+    .ellipse-4 {
+        width: 360px;
+        height: 360px;
+        filter: blur(150px);
+    }
+
+    .ellipse-1 {
+        top: -100px;
+        left: -100px;
+    }
+
+    .ellipse-2 {
+        top: 700px;
+        right: -100px;
+    }
+
+    .ellipse-3 {
+        top: 1700px;
+        left: -100px;
+    }
+
+    .ellipse-4 {
+        top: 2500px;
+        right: -100px;
+    }
+
+    /* 2. Top Nav */
+    .top-nav {
+        padding: 20px 30px;
+        height: 73px;
+    }
+
+    .logo {
+        width: 97px;
+        height: 33px;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .button-register {
+        display: none;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+
+    /* 3. Hero */
+    .hero {
+        padding: 20px 30px;
+        gap: 15px;
+        height: 243px;
+    }
+
+    .hero-title {
+        max-width: 330px;
+        height: 62px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .hero-text {
+        max-width: 330px;
+        height: 68px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .button-hero {
+        width: 187px;
+        height: 43px;
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    /* 4. Why */
+    .why {
+        padding: 20px 30px;
+        gap: 30px;
+        height: 1071px;
+    }
+
+    .why .section-title {
+        max-width: 330px;
+        height: 31px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .why-items {
+        max-width: 330px;
+        height: 970px;
+        gap: 30px 50px;
+    }
+
+    .feature {
+        width: 300px;
+        height: 150px;
+        gap: 10px;
+    }
+
+    .feature:nth-child(2) {
+        height: 172px;
+    }
+
+    .feature:nth-child(3),
+    .feature:nth-child(4),
+    .feature:nth-child(5) {
+        height: 176px;
+    }
+
+    .feature-icon {
+        height: 60px;
+    }
+
+    .feature-icon img {
+        max-height: 60px;
+    }
+
+    .feature-title {
+        width: 300px;
+        height: 26px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .feature:nth-child(3) .feature-title,
+    .feature:nth-child(4) .feature-title,
+    .feature:nth-child(5) .feature-title {
+        height: 52px;
+    }
+
+    .feature-text {
+        width: 300px;
+        height: 44px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .feature-pros .feature-text {
+        height: 66px;
+    }
+
+    /* 5. Courses */
+    .courses {
+        padding: 20px 30px;
+        gap: 30px;
+        height: 441px;
+    }
+
+    .courses .section-title {
+        max-width: 330px;
+        height: 31px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .courses-slider {
+        max-width: 330px;
+        height: 340px;
+        gap: 25px;
+        justify-content: flex-start;
+    }
+
+    .course-card {
+        width: 320px;
+        height: 340px;
+        padding: 30px 20px 20px;
+        gap: 20px;
+    }
+
+    .course-up {
+        width: 280px;
+        height: 193px;
+    }
+
+    .course-icon,
+    .course-icon img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .course-title {
+        width: 280px;
+        height: 52px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .course-text {
+        width: 280px;
+        height: 51px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .button-enroll {
+        width: 148px;
+        height: 43px;
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    /* 6. Steps */
+    .steps {
+        padding: 20px 30px;
+        gap: 30px;
+        height: 549px;
+    }
+
+    .steps .section-title {
+        max-width: 330px;
+        height: 62px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .steps-row {
+        max-width: 330px;
+        height: 417px;
+        flex-wrap: wrap;
+        gap: 30px 17px;
+    }
+
+    .step {
+        width: 300px;
+        height: 119px;
+        gap: 15px;
+    }
+
+    .step-icon {
+        height: 60px;
+    }
+
+    .step-icon img {
+        max-height: 60px;
+    }
+
+    .step-text {
+        width: 300px;
+        height: 44px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    /* 7. Testimonials */
+    .testimonials {
+        padding: 20px 30px;
+        gap: 30px;
+        height: 460.39px;
+    }
+
+    .testimonials .section-title {
+        max-width: 330px;
+        height: 31px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .testimonials-slider {
+        max-width: 330px;
+        height: 359.39px;
+        gap: 25px;
+        justify-content: flex-start;
+    }
+
+    .testimonial-card {
+        width: 320px;
+        height: 359.39px;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .testimonial-name {
+        width: 280px;
+        height: 123px;
+    }
+
+    .testimonial-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .testimonial-avatar img {
+        width: 40px;
+        height: 42.59px;
+    }
+
+    .testimonial-person {
+        width: 280px;
+        height: 26px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .testimonial-role {
+        width: 280px;
+        height: 17px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .testimonial-quote {
+        width: 280px;
+        height: 156.39px;
+    }
+
+    .quote-text,
+    .quote-text-ahmed {
+        width: 280px;
+        height: 102px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    /* 8. CTA */
+    .cta {
+        padding: 20px 30px;
+        gap: 20px;
+        height: 241px;
+    }
+
+    .cta-text {
+        max-width: 330px;
+        height: 138px;
+    }
+
+    .cta-title {
+        max-width: 330px;
+        height: 62px;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+    .cta-subtitle {
+        max-width: 330px;
+        height: 66px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .button-cta {
+        width: 179px;
+        height: 43px;
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .cta-btn-desktop {
+        display: none;
+    }
+
+    .cta-btn-mobile {
+        display: inline;
+    }
+
+    /* 9. Footer */
+    .footer {
+        padding: 20px 30px;
+        gap: 15px;
+        height: 336px;
+    }
+
+    .footer-logo {
+        width: 146px;
+        height: 50px;
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+        max-width: 330px;
+        height: 140px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .footer-link-about {
+        width: 87px;
+    }
+
+    .footer-link-partnerships {
+        width: 116px;
+    }
+
+    .footer-link-instructor {
+        width: 194px;
+    }
+
+    .footer-link-support {
+        width: 75px;
+    }
+
+    .footer-link-faq {
+        width: 42px;
+    }
+
+    .footer-address {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 330px;
+        height: 44px;
+    }
+
+    .footer-email {
+        width: 228px;
+        height: 17px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .footer-location {
+        width: 348px;
+        height: 17px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .footer-copyright {
+        flex-direction: row;
+        gap: 10px;
+        max-width: 330px;
+        height: 17px;
+    }
+
+    .copyright-left {
+        width: 137px;
+        height: 17px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .copyright-right {
+        width: 141px;
+        height: 17px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+}
