@@ -909,10 +909,10 @@ footer {
     }
 
     .hero-title {
-        max-width: 668px;
-        min-height: 204px;
-        font-size: 48px;
-        line-height: 68px;
+        max-width: 480px;
+        min-height: 144px;
+        font-size: 36px;
+        line-height: 48px;
     }
 
     .hero-text {
